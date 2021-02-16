@@ -1,6 +1,11 @@
 .cover-container {
   max-width: 42em;
 }
+html,
+body {
+
+  background-color: #333;
+}
 
 .masthead {
   margin-bottom: 2rem;
