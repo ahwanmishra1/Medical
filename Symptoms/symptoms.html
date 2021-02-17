@@ -16,6 +16,8 @@
 
     <!-- Font Awesome  -->
     <script src="https://kit.fontawesome.com/31875a1568.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
   <body class="bg-light">
@@ -25,7 +27,7 @@
         <div class="inner">
           <h3 class="masthead-brand">Medical Help</h3>
           <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="../index.html">Home</a>
+            <a class="nav-link" href="../index.html">Home</a>
             <a class="nav-link" href="#">About</a>
             <a class="nav-link" href="#">Comparision</a>
           </nav>
@@ -41,7 +43,7 @@
 
         <div class="">
           <h4 class="mb-3">Personal info</h4>
-          <form class="needs-validation" novalidate>
+          <form class="needs-validation" action="../Result/result.html" novalidate>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -110,52 +112,32 @@
               </div>
             </div>
             <hr class="mb-4">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="same-address">
-              <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="save-info">
-              <label class="custom-control-label" for="save-info">Save this information for next time</label>
-            </div>
-            <hr class="mb-4">
+
 
             <h4 class="mb-3">Symptoms</h4>
 
-            <div class="row mb-4">
-              <div class="form-outline col-10">
-                <input type="text" class="form-control" id="searchsymptom" placeholder="Symptom">
-              </div>
-              <div class="col-2">
-                <button type="button" class="btn btn-primary btn-block">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </div>
+
             <div class="row">
               <div class="col-md-4 order-md-2 mb-4">
                 <label>Selected Symptoms</label>
                 <ul class="list-group mb-3">
                   <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                      <h6 class="my-0">Product name</h6>
-                      <small class="text-muted">Brief description</small>
+                      <h6 class="my-0">Symptom name</h6>
                     </div>
-                    <span class="text-muted">$12</span>
+                    <span class="text-muted"><i class="fas fa-times"></i></span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                      <h6 class="my-0">Second product</h6>
-                      <small class="text-muted">Brief description</small>
+                      <h6 class="my-0">Symptom name</h6>
                     </div>
-                    <span class="text-muted">$8</span>
+                    <span class="text-muted"><i class="fas fa-times"></i></span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                      <h6 class="my-0">Third item</h6>
-                      <small class="text-muted">Brief description</small>
+                      <h6 class="my-0">Symptom name</h6>
                     </div>
-                    <span class="text-muted">$5</span>
+                    <span class="text-muted"><i class="fas fa-times"></i></span>
                   </li>
 
                 </ul>
@@ -163,8 +145,28 @@
 
               </div>
               <div class="col-md-8 order-md-1">
-                <label for="">Symptoms List</label>
+                <div class="form-body">
+                  <div class="form-group">
+                    <label class="control-label">Symptoms List</label>
+                    <div class="fields">
+                      <div class="input-group">
+                        <input type="text" class="form-control"/>
+                        <button type="button" name="button" class="btn btn-primary input-group-addon add-field"><i class="fas fa-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+            <hr class="mb-4">
+
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="same-address">
+              <label class="custom-control-label" for="same-address">I understand that this tool is for informational purpose only.</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="save-info">
+              <label class="custom-control-label" for="save-info">Save this information for next time</label>
             </div>
             <hr class="mb-4">
             <button class="btn btn-primary btn-lg btn-block" type="submit">Predict Now</button>
@@ -172,8 +174,9 @@
         </div>
 
 
+
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">Medical Help</p>
+        <p class="mb-1">© Medical Help</p>
       </footer>
     </div>
 
